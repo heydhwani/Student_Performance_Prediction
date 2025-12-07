@@ -18,3 +18,12 @@ def run_eda():
     plt.title("Final grade (G3) distribution")
     plt.savefig(out_dir / "g3_dist.png")
     plt.close()
+
+    # 2. numeric correlation heatmap
+    numeric = df.select_dtypes(include="number")
+    corr = numeric.corr()
+    plt.figure(figsize=(12,10))
+    sns.heatmap(corr, annot=True, fmt=".2f", cmap="coolwarm")
+    plt.title("Numeric feature correlations")
+    plt.savefig(out_dir / "corr_numeric.png")
+    plt.close()
