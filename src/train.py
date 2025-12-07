@@ -89,3 +89,10 @@ def main():
 
     search.fit(X_train, y_train)
     print("Best params:", search.best_params_)
+
+    best_model = search.best_estimator_
+    preds = best_model.predict(X_test)
+    mae = mean_absolute_error(y_test, preds)
+    mse = mean_squared_error(y_test, preds)
+    r2 = r2_score(y_test, preds)
+    print(f"Test MAE: {mae:.3f}, MSE: {mse:.3f}, R2: {r2:.3f}")
