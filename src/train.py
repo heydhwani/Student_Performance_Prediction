@@ -96,3 +96,7 @@ def main():
     mse = mean_squared_error(y_test, preds)
     r2 = r2_score(y_test, preds)
     print(f"Test MAE: {mae:.3f}, MSE: {mse:.3f}, R2: {r2:.3f}")
+
+    Path("../models").mkdir(parents=True, exist_ok=True)
+    joblib.dump(best_model, "../models/student_pipeline.pkl")
+    print("Saved pipeline to ../models/student_pipeline.pkl")
