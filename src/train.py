@@ -25,8 +25,14 @@ def build_preprocessor(X):
         ("scaler", StandardScaler())
     ])
 
-    # For remaining categoricals use OneHot (handle_unknown='ignore')
+    # For remaining categoricals using OneHot (handle_unknown='ignore')
     categorical_pipeline = Pipeline([
         ("imputer", SimpleImputer(strategy="most_frequent")),
         ("onehot", OneHotEncoder(handle_unknown="ignore", sparse=False))
     ])
+
+    preprocessor = ColumnTransformer([
+        ("num", numeric_pipeline, numeric_cols),
+        ("cat", categorical_pipeline, categorical_cols)
+    ], remainder="drop")
+    return preprocessor, numeric_cols, categorical_cols
