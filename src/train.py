@@ -75,3 +75,14 @@ def main():
         "model__n_estimators": [50, 100, 200],
         "model__max_depth": [None, 5, 10, 15]
     }
+
+    search = RandomizedSearchCV(
+        pipeline,
+        param_distributions,
+        n_iter=10,
+        cv=5,
+        scoring="neg_mean_absolute_error",
+        n_jobs=-1,
+        random_state=42,
+        verbose=1
+    )
