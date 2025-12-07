@@ -24,3 +24,9 @@ def build_preprocessor(X):
         ("imputer", SimpleImputer(strategy="median")),
         ("scaler", StandardScaler())
     ])
+
+    # For remaining categoricals use OneHot (handle_unknown='ignore')
+    categorical_pipeline = Pipeline([
+        ("imputer", SimpleImputer(strategy="most_frequent")),
+        ("onehot", OneHotEncoder(handle_unknown="ignore", sparse=False))
+    ])
