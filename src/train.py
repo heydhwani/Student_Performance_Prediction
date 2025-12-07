@@ -86,3 +86,6 @@ def main():
         random_state=42,
         verbose=1
     )
+
+    search.fit(X_train, y_train)
+    print("Best params:", search.best_params_)
