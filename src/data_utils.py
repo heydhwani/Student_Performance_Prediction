@@ -25,3 +25,23 @@ def get_feature_target(df, target_col="G3"):
     X = df.drop(columns=[target_col])
     y = df[target_col]
     return X, y
+
+def label_encode_columns(df, columns, save_path="../models/encoders.joblib"):
+    """
+    Apply sklearn LabelEncoder for each column in `columns`.
+    - Returns transformed dataframe and saves encoders dict to save_path.
+    - This is intended for binary or low-cardinality categorical columns
+      where label encoding is acceptable.
+    """
+    encoders = {}
+    df = df.copy()
+    for col in columns:
+        le = LabelEncoder()
+        # convert to string to avoid dtype issues
+        df[col] = df[col].astype(str)
+        df[col] = le.fit_transform(df[col])
+        encoders[col] = le
+    # save encoders so predictions later use same mapping
+    Path(save_path).parent.mkdir(parents=True, exist_ok=True)
+    joblib.dump(encoders, save_path)
+    return df, encoders
