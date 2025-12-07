@@ -27,3 +27,10 @@ def run_eda():
     plt.title("Numeric feature correlations")
     plt.savefig(out_dir / "corr_numeric.png")
     plt.close()
+
+    # 3. studytime vs G3 scatter
+    plt.figure(figsize=(6,4))
+    sns.scatterplot(x="studytime", y="G3", data=df, alpha=0.6)
+    plt.title("Studytime vs G3")
+    plt.savefig(out_dir / "studytime_vs_g3.png")
+    plt.close()
