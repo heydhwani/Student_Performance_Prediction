@@ -60,3 +60,12 @@ def main():
     X, y = get_feature_target(df_enc, target_col="G3")
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    preprocessor, numeric_cols, categorical_cols = build_preprocessor(X_train)
+    print("Numeric cols:", numeric_cols)
+    print("Categorical cols (to OneHot):", categorical_cols)
+
+    pipeline = Pipeline([
+        ("preproc", preprocessor),
+        ("model", RandomForestRegressor(random_state=42))
+    ])
