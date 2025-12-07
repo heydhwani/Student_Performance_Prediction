@@ -36,3 +36,7 @@ def build_preprocessor(X):
         ("cat", categorical_pipeline, categorical_cols)
     ], remainder="drop")
     return preprocessor, numeric_cols, categorical_cols
+
+def main():
+    # 1) load
+    df = load_datasets("/data")
