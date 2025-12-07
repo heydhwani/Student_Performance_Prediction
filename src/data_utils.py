@@ -17,3 +17,11 @@ def load_datasets(data_dir: str = "../data"):
     df = pd.concat([mat, por], ignore_index=True)
     df = df.drop_duplicates().reset_index(drop=True)
     return df
+
+def get_feature_target(df, target_col="G3"):
+    """
+    Returns X (features) and y (target).
+    """
+    X = df.drop(columns=[target_col])
+    y = df[target_col]
+    return X, y
