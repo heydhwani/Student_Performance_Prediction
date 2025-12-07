@@ -18,3 +18,9 @@ def build_preprocessor(X):
     numeric_cols = X.select_dtypes(include=["int64","float64"]).columns.tolist()
     # categorical columns (remaining objects)
     categorical_cols = X.select_dtypes(include=["object"]).columns.tolist()
+
+    # Imputer + scaler for numeric
+    numeric_pipeline = Pipeline([
+        ("imputer", SimpleImputer(strategy="median")),
+        ("scaler", StandardScaler())
+    ])
