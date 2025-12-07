@@ -55,3 +55,6 @@ def main():
     # 3) apply label encoding (this also saves encoders to models/encoders.joblib)
     df_enc, encoders = label_encode_columns(df, binary_like, save_path="/models/encoders.joblib")
     print("Saved label encoders for columns:", list(encoders.keys()))
+
+    # 4) features & target
+    X, y = get_feature_target(df_enc, target_col="G3")
