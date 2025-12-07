@@ -40,3 +40,10 @@ def build_preprocessor(X):
 def main():
     # 1) load
     df = load_datasets("/data")
+
+    binary_like = [
+        "school","sex","address","famsize","Pstatus","schoolsup","famsup",
+        "paid","activities","nursery","higher","internet","romantic","subject"
+    ]
+    # Ensure only columns present are used
+    binary_like = [c for c in binary_like if c in df.columns]
