@@ -11,3 +11,10 @@ def run_eda():
 
     print("Data shape:", df.shape)
     print(df.info())
+
+    # 1. target distribution
+    plt.figure(figsize=(6,4))
+    sns.histplot(df["G3"], bins=20, kde=True)
+    plt.title("Final grade (G3) distribution")
+    plt.savefig(out_dir / "g3_dist.png")
+    plt.close()
