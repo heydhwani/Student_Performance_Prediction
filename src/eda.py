@@ -34,3 +34,8 @@ def run_eda():
     plt.title("Studytime vs G3")
     plt.savefig(out_dir / "studytime_vs_g3.png")
     plt.close()
+
+    print("EDA figures saved to:", out_dir)
+
+if __name__ == "__main__":
+    run_eda()
