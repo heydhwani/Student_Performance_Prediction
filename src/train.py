@@ -47,3 +47,11 @@ def main():
     ]
     # Ensure only columns present are used
     binary_like = [c for c in binary_like if c in df.columns]
+
+    # 3) apply label encoding (this also saves encoders to models/encoders.joblib)
+    df_enc, encoders = label_encode_columns(df, binary_like, save_path="/models/encoders.joblib")
+    print("Saved label encoders for columns:", list(encoders.keys()))
+
+    # 3) apply label encoding (this also saves encoders to models/encoders.joblib)
+    df_enc, encoders = label_encode_columns(df, binary_like, save_path="/models/encoders.joblib")
+    print("Saved label encoders for columns:", list(encoders.keys()))
