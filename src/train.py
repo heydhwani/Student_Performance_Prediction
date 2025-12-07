@@ -69,3 +69,9 @@ def main():
         ("preproc", preprocessor),
         ("model", RandomForestRegressor(random_state=42))
     ])
+
+    param_distributions = {
+        "model": [RandomForestRegressor(random_state=42), XGBRegressor(objective="reg:squarederror", random_state=42)],
+        "model__n_estimators": [50, 100, 200],
+        "model__max_depth": [None, 5, 10, 15]
+    }
