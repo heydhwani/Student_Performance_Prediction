@@ -286,14 +286,6 @@ These results are displayed beautifully inside the Streamlit interface using:
 ---
 
 
-## 🖼️ Enhancement Ideas
-
-- Show emoji/photo based on grade in frontend.
-- Implement history tracking per student.
-- Deploy via Render, Vercel, or Docker.
-
----
-
 ## 📘 Dataset Info
 
 - Source: UCI Portuguese Student Dataset
