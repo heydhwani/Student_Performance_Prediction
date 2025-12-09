@@ -10,18 +10,18 @@ st.write("Choose options and click **Predict**. Labels include short explanation
 
 # ----- mappings from readable label -> dataset code -----
 SCHOOL_MAP = {
-    "GP — Gabriel Pereira (code: GP)": "GP",
-    "MS — Mousinho da Silveira (code: MS)": "MS"
+    "GP — Gabriel Pereira": "GP",
+    "MS — Mousinho da Silveira": "MS"
 }
 
 FAMSIZE_MAP = {
-    "GT3 — more than 3 family members (code: GT3)": "GT3",
-    "LE3 — 3 or fewer family members (code: LE3)": "LE3"
+    "GT3 — more than 3 family members": "GT3",
+    "LE3 — 3 or fewer family members": "LE3"
 }
 
 ADDRESS_MAP = {
-    "U — Urban (code: U)": "U",
-    "R — Rural (code: R)": "R"
+    "U — Urban": "U",
+    "R — Rural": "R"
 }
 
 JOB_MAP = {
