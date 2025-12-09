@@ -25,6 +25,8 @@ student_performance_prediction/
 ├── app.py                                            # FastAPI backend logic
 ├── Student_Performance_model.py                      # Model training script
 ├── student_performance_portuguese_dataset.csv        # Cleaned Portuguese dataset used for training
+├── eda.py                                            #Exploratory Data Analysis on the dataset (visualizations & insights)
+├── streamlit_app.py                                  # Streamlit frontend UI for student performance prediction
 ├── student_performance_model.joblib                  # Trained RandomForest model
 ├── label_encoders.joblib                             # Encoders for categorical columns
 ├── requirements.txt                                  # Python package dependencies
