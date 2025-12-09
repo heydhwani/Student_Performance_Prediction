@@ -53,7 +53,7 @@ with st.form("prediction_form"):
     st.subheader("Family Background")
     famsize_label = st.selectbox("Family Size", list(FAMSIZE_MAP.keys()),
                                  help="GT3 = more than 3 members, LE3 = 3 or fewer members")
-    Pstatus = st.selectbox("Parent Cohabitation Status", ["Together", "Apart"],
+    Pstatus = st.selectbox("Parent Cohabitation Status", ["T", "A"],
                            help="T = living together, A = apart")
     Medu = st.number_input("Mother's Education (0=none .. 4=higher)", 0, 4, 2)
     Fedu = st.number_input("Father's Education (0=none .. 4=higher)", 0, 4, 2)
