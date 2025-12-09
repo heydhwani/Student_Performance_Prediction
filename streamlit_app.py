@@ -25,11 +25,11 @@ ADDRESS_MAP = {
 }
 
 JOB_MAP = {
-    "at_home — stays at home (code: at_home)": "at_home",
-    "health — healthcare related (code: health)": "health",
-    "other — other profession (code: other)": "other",
-    "services — service sector (code: services)": "services",
-    "teacher — teaching profession (code: teacher)": "teacher"
+    "at_home — stays at home": "at_home",
+    "health — healthcare related": "health",
+    "other — other profession": "other",
+    "services — service sector": "services",
+    "teacher — teaching profession": "teacher"
 }
 
 REASON_MAP = {
@@ -53,7 +53,7 @@ with st.form("prediction_form"):
     st.subheader("Family Background")
     famsize_label = st.selectbox("Family Size", list(FAMSIZE_MAP.keys()),
                                  help="GT3 = more than 3 members, LE3 = 3 or fewer members")
-    Pstatus = st.selectbox("Parent Cohabitation Status", ["T", "A"],
+    Pstatus = st.selectbox("Parent Cohabitation Status", ["Together", "Apart"],
                            help="T = living together, A = apart")
     Medu = st.number_input("Mother's Education (0=none .. 4=higher)", 0, 4, 2)
     Fedu = st.number_input("Father's Education (0=none .. 4=higher)", 0, 4, 2)
