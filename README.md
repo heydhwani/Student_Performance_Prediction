@@ -14,7 +14,11 @@ A machine learning-powered web API using **FastAPI** to predict the **final grad
   - Health Status
 - Categorical label encoding with automatic casing normalization.
 - Grading remark generation (A+, B, C, etc.).
-- Easy Flutter/mobile app integration.
+- Interactive Streamlit web app for real-time prediction and user-friendly data entry.
+- Test App here-
+- [https://studentperformanceprediction-6fuauwc3jrctyv7y57cwip.streamlit.app/](https://studentperformanceprediction-6fuauwc3jrctyv7y57cwip.streamlit.app/)
+
+
 
 ---
 
@@ -263,11 +267,7 @@ pip install streamlit requests
 streamlit run app.py
 
 ```
-### Streamlit App URL :
 
-- [https://studentperformanceprediction-6fuauwc3jrctyv7y57cwip.streamlit.app/](https://studentperformanceprediction-6fuauwc3jrctyv7y57cwip.streamlit.app/)
-
----
 
 ### 📊App Output
 The API returns values like:
