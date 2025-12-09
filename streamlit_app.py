@@ -164,7 +164,7 @@ if submitted:
             st.success("Prediction received!")
             st.metric("Predicted Final Marks", result.get("predicted_final_Marks", "—"))
             st.write("Remark:", result.get("remark", "—"))
-            st.json(result)
+            
         else:
             st.error(f"API error (status {resp.status_code})")
             try:
