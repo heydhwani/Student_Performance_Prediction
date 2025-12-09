@@ -214,6 +214,70 @@ python eda.py
 
 ---
 
+# 🎨 Student Performance Prediction — Streamlit App
+
+This is a **simple Streamlit web application** that allows users to input student details and get a predicted final score using a Machine Learning model hosted on a **FastAPI backend**.
+
+The Streamlit app collects user inputs through a clean UI, sends them as JSON to the FastAPI `/predict` endpoint, and displays the predicted marks and remark.
+
+---
+
+## 🚀 Features
+
+- Clean and simple user interface  
+- Form-based inputs for:
+  - Student details  
+  - Family background  
+  - Academic performance  
+  - Health and lifestyle  
+- Sends POST request to FastAPI backend  
+- Displays:
+  - Predicted marks  
+  - Remark (A+, A, B, C, etc.)  
+  - Full JSON response  
+- Dropdowns ensure valid categorical inputs (no API errors)
+
+---
+
+## 🌐 API Endpoint Used
+
+The Streamlit app communicates with your deployed FastAPI API:
+
+```
+https://student-performance-prediction-8s1j.onrender.com/predict
+```
+This endpoint accepts a nested JSON body and returns predicted marks + remark.
+
+---
+
+## 📦 How to Run the Streamlit App
+
+### 1️⃣ Install required libraries
+```bash
+pip install streamlit requests
+```
+### 2️⃣ Run the app
+```bash
+streamlit run app.py
+
+```
+---
+
+### 📊App Output
+The API returns values like:
+```json
+{
+  "predicted_final_Marks": 17.3,
+  "remark": "A (Very Good)"
+}
+```
+These results are displayed beautifully inside the Streamlit interface using:
+
+- `st.metric for final marks`
+- `A styled remark`
+- `Full API JSON response for debugging`
+
+---
 
 
 ## 🖼️ Enhancement Ideas
