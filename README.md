@@ -153,6 +153,69 @@ POST /predict
 
 ---
 
+## 📊 Student Performance Dataset — Exploratory Data Analysis (EDA)
+
+This project performs Exploratory Data Analysis (EDA) on the Portuguese Student Performance Dataset to understand data patterns, distributions, correlations, and important features for building machine-learning models.
+
+### 📁 Dataset Path
+```bash
+Dataset/student_performance_portuguese_dataset.csv
+```
+### 🛠️Libraries Used
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+## 🚀 EDA Script Overview
+The script performs the following tasks:
+
+###  1. Load Dataset & Show Basic Information
+This displays:
+- `First 5 rows`
+- `Column data types`
+- `Summary statistics`
+- `Missing values in each column`
+
+---
+
+### 2. Histogram for Numeric Columns
+Purpose:
+- `Understand the distribution of numeric features`
+- `Detect skewness`
+- `Visualize spread`
+
+---
+
+### 3. Boxplots for Numeric Columns
+Purpose:
+- `Detect outliers`
+- `Compare ranges of numeric variables`
+
+---
+
+### 4. Correlation Heatmap (Numeric Only)
+Purpose:
+- `Reveal relationships between features`
+- `Identify highly correlated variables`
+- `Understand influence on final grades`
+---
+
+## ▶️ How to Run the EDA Script
+1.Install dependencies
+```bash
+pip install pandas matplotlib seaborn
+```
+2.Run the script
+```bash
+python eda.py
+```
+
+---
+
+
+
 ## 🖼️ Enhancement Ideas
 
 - Show emoji/photo based on grade in frontend.
