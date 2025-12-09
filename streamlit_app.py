@@ -33,10 +33,10 @@ JOB_MAP = {
 }
 
 REASON_MAP = {
-    "home — close to home (code: home)": "home",
-    "reputation — good reputation (code: reputation)": "reputation",
-    "course — liked the course (code: course)": "course",
-    "other — other reason (code: other)": "other"
+    "home — close to home": "home",
+    "reputation — good reputation": "reputation",
+    "course — liked the course": "course",
+    "other — other reason": "other"
 }
 
 # ----- form -----
