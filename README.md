@@ -263,7 +263,7 @@ streamlit run app.py
 ```
 ### Streamlit App URL :
 
-- Streamlit: [https://studentperformanceprediction-6fuauwc3jrctyv7y57cwip.streamlit.app/](https://studentperformanceprediction-6fuauwc3jrctyv7y57cwip.streamlit.app/)
+- [https://studentperformanceprediction-6fuauwc3jrctyv7y57cwip.streamlit.app/](https://studentperformanceprediction-6fuauwc3jrctyv7y57cwip.streamlit.app/)
 
 ---
 
