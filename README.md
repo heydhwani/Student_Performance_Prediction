@@ -36,7 +36,7 @@ student_performance_prediction/
 ## 🛠️ Installation
 
 ### Prerequisites:
-- Python 3.9.5
+- Python 3.14.0
 
 ### Setup:
 ```bash
@@ -77,7 +77,7 @@ uvicorn app:app --reload
 Navigate to:
 - Swagger Docs: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 - Root: [http://127.0.0.1:8000](http://127.0.0.1:8000)
-- Render: [https://student-performance-prediction-hh3v.onrender.com](https://student-performance-prediction-hh3v.onrender.com)
+- Render: [https://student-performance-prediction-8s1j.onrender.com](https://student-performance-prediction-8s1j.onrender.com)
 
 ---
 
