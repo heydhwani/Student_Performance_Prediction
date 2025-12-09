@@ -72,9 +72,8 @@ def predict(data: StudentInput):
             **data.health.dict()
         }
 
-        # Convert all string inputs to lowercase
-        input_data = {k: v.lower() if isinstance(v, str) else v for k, v in input_data.items()}
-
+        
+        
         # Apply label encoding where needed
         for col in label_encoders:
             le = label_encoders[col]
